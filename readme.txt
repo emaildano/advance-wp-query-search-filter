@@ -22,11 +22,11 @@ This plugin is an upgraded version of WP_Query Search Filter with added a lot of
 * Using wp search template to disply the result.
 * Admin can define how many result per page.
 * Admin can sorting the result page by meta key and meta value.
-* Using shorcode to display the search form.
+* Using shortcode to display the search form.
 
 
 If you have any problems with current plugin, please leave a
-message on Forums Posts or goto [Here](http://9-sec.com/).
+message on Forums Posts or goto [Here](http://9-sec.com/2013/03/advance-wp-query-search-filter/).
 
 
 == Installation ==
