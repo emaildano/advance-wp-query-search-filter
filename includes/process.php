@@ -195,7 +195,7 @@ if(isset($_GET['taxo']) ){
 
 }
 
-$query = $searchterm1.' '.$searchterm2.' ';
+$query = esc_attr($searchterm1).' '.esc_attr($searchterm2).' ';
 }
 elseif(isset($_GET['s'])){
 

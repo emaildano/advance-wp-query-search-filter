@@ -14,7 +14,7 @@ $addlink = add_query_arg(array('formid' => 'new', 'formaction' => 'new'), AWQS);
 <?php 
 $postid = absint($_GET['formid'])  ? esc_attr($_GET['formid']) : '';
 if(isset($postid) && absint($postid)){
-echo '<div class="showcode"><h2>[awsqf-form id='.$postid.']</h2><span class="drag">'.esc_html( __( 'Copy this code and paste it into your post, page or text widget content.', 'AWQSFTXT' ) ).'</span></div>';
+echo '<div class="showcode"><h2>'.strtolower("[awsqf-form id=$postid]").'</h2><span class="drag">'.esc_html( __( 'Copy this code and paste it into your post, page or text widget content.', 'AWQSFTXT' ) ).'</span></div>';
 }
 ?>
 <br>
