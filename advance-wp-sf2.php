@@ -3,7 +3,7 @@
 Plugin Name: Advance WP Query Search Filter
 Plugin URI: http://www.9-sec.com/
 Description: This plugin let you using wp_query to filter taxonomy,custom meta and post type as search result.
-Version: 1.0.1
+Version: 1.0.2
 Author: TC 
 Author URI: http://www.9-sec.com/
 */
@@ -114,7 +114,7 @@ class awqsf{
 			// Register the style in the front end for the front:
 		wp_register_style( 'awqsf-custom-style', plugins_url( 'css/awqsf-style.css', __FILE__ ), array(),  'all' );
 		wp_enqueue_style( 'awqsf-custom-style' );
-		wp_register_script( 'awqsf-frontjs', plugins_url( 'js/awqsf-front.js', __FILE__ ), array(),  'all' );
+		wp_register_script( 'awqsf-frontjs', plugins_url( 'js/awqsf-front.js', __FILE__ ), array('jquery'), '1.0' );
 		wp_enqueue_script('awqsf-frontjs');
 
 	}
