@@ -209,6 +209,50 @@ return apply_filters('awqsf_search_query',$query); //filter for custom query
 }
 }
 add_filter( 'get_search_query', 'change_awqsf_var', 20, 1 );
-add_filter('wp_title', 'change_awqsf_var');
+
+function awqsf_search_title($title  )
+{
+if(is_search()){
+if(isset($_GET['cmf']) || isset($_GET['taxo'])){
+if(isset($_GET['cmf']) ){
+ 	 $cmfterms = $_GET['cmf'];$sterm = '';
+	foreach( $cmfterms as $v){
+	if(isset($v['value']) && $v['value'] !='wqsfcmfall')
+	//exclude 'all text' in custom meta field. You can use to display it with other text you like by responding the meta key. exp if($v['value'] =='wqsfcmfall' && $v[metakey] == 'responding meta key'){$sterm[] = 'All price' ; }
+	 {$sterm = $v['value'];}
+	}
+	if(is_array($sterm)){
+	$searchterm1 =  implode(",", $sterm);//you can implode with your value as well. But this applied with all values (including null value) 
+	}else{$searchterm1 = $sterm;}
+
+}
+if(isset($_GET['taxo']) ){
+ 	 $taxterms = $_GET['taxo'];$sterm2 = '';
+	foreach( $taxterms as $v){
+	if(isset($v['term']) && $v['term'] !='wqsftaxoall')//exclude 'all text' in taxonomy term.  You can use to display it with other text you like by responding the taxonomy. exp if($v['term'] =='wqsfcmfall' && $v['name'] == 'responding meta key'){$sterm[] = 'All cities' ; }
+	 {$sterm2 = $v['term'];}
+	}
+	if(is_array($sterm2)){
+	$searchterm2 =  implode(",", $sterm2);}//you can implode with your value as well. But this applied with all values (including null value) 
+	else{$searchterm2 = $sterm2;}
+
+}
+
+$query = esc_attr($searchterm1).' '.esc_attr($searchterm2).' ';
+}
+elseif(isset($_GET['s'])){
+
+ $query = get_query_var( 's' );
+ 		
+      $query = esc_attr( $query );
+    
+
+}
+return apply_filters('awqsf_search_title',$query); //filter for custom query
+}
+else{return $title; }
+}
+add_filter('wp_title', 'awqsf_search_title');
+
 
 ;?>
