@@ -1,5 +1,5 @@
 <?php
-  echo '<div class="awqsf_box"><label class="taxo-cmf-'.$i.'">'.$v['label'].'</label><br>';
+  echo '<div class="awqsf_box cmfdrop-'.$i.'"><label class="taxo-cmf-'.$i.'">'.$v['label'].'</label><br>';
      echo '<input type="hidden" name="cmf['.$i.'][metakey]" value="'.$v['metakey'].'">';
      echo '<input type="hidden" name="cmf['.$i.'][compare]" value="'.$v['compare'].'">';
      echo  '<select id="cmf-'.$i.'" name="cmf['.$i.'][value]">'; 

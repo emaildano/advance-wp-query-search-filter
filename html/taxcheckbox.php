@@ -1,10 +1,10 @@
 <?php
 
 if ( $count > 0 ){
-echo '<div class="awqsf_box"><label class="taxo-label-'.$c.'">'.$v['taxlabel'].'</label><br>';
+echo '<div class="awqsf_box taxocheck-'.$c.'"><label class="taxo-label-'.$c.'">'.$v['taxlabel'].'</label><br>';
 echo '<input  type="hidden" name="taxo['.$c.'][name]" value="'.$v['taxname'].'">';
   $checked = isset($_GET['taxo'][$c]['call']) ? 'checked="checked"' : '';
-     echo '<label><input type="checkbox" id="taxo-'.$c.'" name="taxo['.$c.'][call]" class="checkall" '.$checked.'>'.$v['taxall'].'</label>';
+     echo '<label class="taxcheckbox"><input type="checkbox" id="taxo-'.$c.'" name="taxo['.$c.'][call]" class="checkall" '.$checked.'>'.$v['taxall'].'</label>';
 foreach ( $terms as $term ) {
 $selected = '';
  if(isset($_GET['taxo'][$c]['term'])){

@@ -1,9 +1,9 @@
 <?php
-     echo '<div class="awqsf_box"><label class="taxo-cmf-'.$i.'">'.$v['label'].'</label><br>';
+     echo '<div class="awqsf_box cmfcheck-'.$i.'"><label class="taxo-cmf-'.$i.'">'.$v['label'].'</label><br>';
      echo '<input type="hidden" name="cmf['.$i.'][metakey]" value="'.$v['metakey'].'">';
      echo '<input type="hidden" name="cmf['.$i.'][compare]" value="'.$v['compare'].'">';
      $checked = isset($_GET['cmf'][$i]['call']) ? 'checked="checked"' : '';
-     echo '<label><input type="checkbox" id="cmf-'.$i.'" name="cmf['.$i.'][call]" class="checkall" '.$checked.'>'.$v['all'].'</label>';
+     echo '<label class="cmfcheckbox"><input type="checkbox" id="cmf-'.$i.'" name="cmf['.$i.'][call]" class="checkall" '.$checked.'>'.$v['all'].'</label>';
      $opts = explode("|", $v['opt']);
 	foreach ( $opts as $opt ) {
 
