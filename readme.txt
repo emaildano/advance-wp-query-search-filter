@@ -3,8 +3,8 @@ Contributors: TC.K
 Donate link: http://9-sec.com/donation/
 Tags: Search Filter, taxonoy, custom post type, custom meta field, taxonomy & meta field filter, advanced search
 Requires at least: 3.4
-Tested up to: 3.5.0
-Stable tag: 1.0.5
+Tested up to: 3.5.1
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,3 +81,6 @@ Just giving `0` to `formtitle` atribute in the shortcode eg. '[awsqf-form id=329
 
 = 1.0.5 =
 * Fix Shortcode output markup problem
+
+= 1.0.6 =
+* Fix get_search_query and wp_title filter Undefined variable warning. 
