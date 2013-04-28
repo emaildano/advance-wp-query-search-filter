@@ -3,7 +3,7 @@
 Plugin Name: Advance WP Query Search Filter
 Plugin URI: http://www.9-sec.com/
 Description: This plugin let you using wp_query to filter taxonomy,custom meta and post type as search result.
-Version: 1.0.6
+Version: 1.0.7
 Author: TC 
 Author URI: http://www.9-sec.com/
 */
@@ -250,10 +250,10 @@ class awqsf{
 					
 				}
 			
-				$oldcpt = get_post_meta($post_id, 'awqsf-cpt', true);
-				$oldtaxo = get_post_meta($post_id, 'awqsf-taxo', true);
-				$oldcmf = get_post_meta($post_id, 'awqsf-cmf', true);	
-				$oldrel = get_post_meta($post_id, 'awqsf-relbool', true);
+				$oldcpt = get_post_meta($postid, 'awqsf-cpt', true);
+				$oldtaxo = get_post_meta($postid, 'awqsf-taxo', true);
+				$oldcmf = get_post_meta($postid, 'awqsf-cmf', true);	
+				$oldrel = get_post_meta($postid, 'awqsf-relbool', true);
 				
 				$newcpt = !empty($cptarray) ? $cptarray : '';
 				$newtaxo = !empty($taxoarray) ? $taxoarray : '';
