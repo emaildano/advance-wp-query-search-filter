@@ -28,6 +28,10 @@ if(!empty($taxo)){
 	      if(empty($v['type'])){include "taxdropdown.php";}
 	$c++;			
   }
+	$newtaxo ='';
+	$newtaxo = apply_filters('awpqsf_addextra_taxo', $newtaxo, $c);
+  	echo $newtaxo;
+
 }
 
 if(!empty($cmf)){  
@@ -48,6 +52,10 @@ if(!empty($cmf)){
      }else{include "cmfdropdown.php";}
      $i++;
    }	
+      $newcmf ='';
+      $newcmf = apply_filters('awpqsf_addextra_cmf', $cmf, $i);
+      echo $newcmf;	
+
 }
 
 if(isset($options[0]['strchk']) && ($options[0]['strchk'] == '1') ){

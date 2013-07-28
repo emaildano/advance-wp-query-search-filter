@@ -87,7 +87,7 @@ Just giving `0` to `formtitle` atribute in the shortcode eg. '[awsqf-form id=329
 
 = 1.0.7 =
 * Fix Undefined variable warning. 
-
-= 1.0.7 =
-* Fix Undefined variable warning. 
 * Add new action hooks.
+
+= 1.0.9 =
+* Add new filter hooks in search form for taxonomy and custom meta field.
