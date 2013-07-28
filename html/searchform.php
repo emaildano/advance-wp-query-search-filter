@@ -29,7 +29,7 @@ if(!empty($taxo)){
 	$c++;			
   }
 	$newtaxo ='';
-	$newtaxo = apply_filters('awpqsf_addextra_taxo', $newtaxo, $c);
+	$newtaxo = apply_filters('awpqsf_addextra_taxo', $newtaxo, $c,$id);
   	echo $newtaxo;
 
 }
@@ -53,7 +53,7 @@ if(!empty($cmf)){
      $i++;
    }	
       $newcmf ='';
-      $newcmf = apply_filters('awpqsf_addextra_cmf', $cmf, $i);
+      $newcmf = apply_filters('awpqsf_addextra_cmf', $cmf, $i,$id);
       echo $newcmf;	
 
 }
