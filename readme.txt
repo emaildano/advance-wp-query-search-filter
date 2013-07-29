@@ -4,7 +4,7 @@ Donate link: http://9-sec.com/donation/
 Tags: Search Filter, taxonoy, custom post type, custom meta field, taxonomy & meta field filter, advanced search
 Requires at least: 3.4
 Tested up to: 3.5.1
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,3 +91,6 @@ Just giving `0` to `formtitle` atribute in the shortcode eg. '[awsqf-form id=329
 
 = 1.0.9 =
 * Add new filter hooks in search form for taxonomy and custom meta field.
+
+= 1.0.10 =
+* Fix filter error on meta field output.
