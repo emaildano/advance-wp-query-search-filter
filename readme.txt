@@ -44,7 +44,7 @@ You can simply refer the awqsf-style.css.css that come with the folder and alter
 
 = What if I want to display the search form in the template? =
 
-Put this into `<?php echo do_shortcode("[awsqf-form id={form id}"); ?>` your template.
+Put this into `<?php echo do_shortcode("[awsqf-form id={form id}]"); ?>` your template.
 
 = What if I want to display the search form in the sidebar widget? =
 
